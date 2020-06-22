@@ -18,7 +18,7 @@ public class AthenaTesting {
 			Class.forName("com.simba.athena.jdbc.Driver");
 
 			//conn=DriverManager.getConnection(ConnectionURL1,props);
-			conn=DriverManager.getConnection("jdbc:awsathena://AwsRegion=us-east-1;User=AKIAUCFYXDZL6AAHSK4P;Password=IgCD6pZSkTQEFUWovqDkrkB1rlUz9fXdvAAWMbmf;S3OutputLocation=s3://movie-list-csv/athena-output/;");
+			conn=DriverManager.getConnection("jdbc:awsathena://AwsRegion=us-east-1;User=;Password=;S3OutputLocation=s3://movie-list-csv/athena-output/;");
 			statement=conn.createStatement();
 			//ResultSet rs= statement.executeQuery(QUERY);
 			ResultSet rs= statement.executeQuery("select count(*) from sampledb.elb_logs;");
